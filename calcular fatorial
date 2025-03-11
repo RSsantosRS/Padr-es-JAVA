@@ -1,0 +1,18 @@
+	public static void main(String[] args) {
+		try (Scanner scanner = new Scanner(System.in)) {
+			System.out.print("Digite um número inteiro: ");
+			int numero = scanner.nextInt();
+
+			int fatorial = calcularFatorial(numero);
+			System.out.println("Fatorial de " + numero + "é" + fatorial);
+		}
+	}
+
+	public static int calcularFatorial(int n) {
+		if (n == 0 || n == 1) {
+			return 1;
+		} else {
+			return n * calcularFatorial(n - 1);
+		}
+	}
+}
