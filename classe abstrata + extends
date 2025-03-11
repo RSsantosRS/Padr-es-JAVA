@@ -1,0 +1,36 @@
+
+abstract class Animal {
+	public void FazerBarulho() {
+		System.out.println("O animal fez um som");
+
+	}
+}
+
+class Porco extends Animal {
+	public void FazerBarulho() {
+		System.out.println("O porco faz OINC!");
+	}
+}
+
+class Cachorro extends Animal {
+	public void FazerBarulho() {
+		System.out.println("O cachorro faz AU AU!");
+	}
+}
+
+class Vaca extends Animal {
+	public void FazerBarulho() {
+		System.out.println("A vaca faz muu!");
+	}
+}
+
+public class Animal {
+	public static void main(String[] args) {
+		Animal cachorro = new Cachorro();
+		Animal porco = new Porco();
+		Animal vaca = new Vaca();
+		Cachorro.FazerBarulho();
+		Porco.FazerBarulho();
+		Vaca.FazerBarulho();
+	}
+}
